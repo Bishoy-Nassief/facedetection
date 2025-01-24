@@ -67,7 +67,7 @@ def save_face_image(image_path, name):
 def recognize_face(image_path):
     # Use DeepFace to compare the input image with the stored images in the database
     result = pd.DataFrame()
-    result = DeepFace.find(image_path, db_path='db_images', enforce_detection=False)
+    result = DeepFace.find(image_path, db_path='db_images', enforce_detection=False, threshold= 0.6)
     # Combine the list of DataFrames into a single DataFrame
     combined_df = pd.concat(result, ignore_index=True)
     
