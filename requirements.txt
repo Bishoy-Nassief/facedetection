@@ -1,5 +1,4 @@
 opencv-python
-deepface
 numpy
 pandas
 shutil
